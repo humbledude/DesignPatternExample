@@ -9,3 +9,13 @@
 개발자는 로그처리를 위해 (당연히 1번을 선택하겠지만) 두가지 옵션을 테스트 해보려 한다.
 
 두가지 알고리즘을 쉽게 비교해볼 수 있는 프로그램을 짜야겠다.
+
+### 예제 사용법
+
+build
+
+```./gradlew clean build```
+
+run
+
+```java -jar build/libs/strategy2-1.0-SNAPSHOT.jar```
