@@ -10,16 +10,17 @@ public class FileProcessor extends Processor{
 
   @Override
   protected void process() {
+    File file = new File("./output");
+    FileOutputStream stream;
     try {
-      File file = new File("./output");
-      FileOutputStream stream = new FileOutputStream(file);
+      stream = new FileOutputStream(file);
       // 뻘짓 process 중
       for (int i = 0; i < 10000; i++) {
         String buffer = "[" + i + "]";
         stream.write(buffer.getBytes());
       }
+      stream.close();
     } catch (Exception e) {
-
     }
   }
 }
