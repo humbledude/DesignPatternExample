@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: com.humbledude.examples.strategy1.App
-
