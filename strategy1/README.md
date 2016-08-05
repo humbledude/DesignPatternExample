@@ -7,3 +7,14 @@
 4. pika 는 추천 알고리즘 `menu4` 을 작성했다. 나름 두루두루 써먹을 수 있겠다.
 
 연령대와 성별에 따라 다른 추천 알고리즘을 통해 유저에게 최적의 결과를 주고 싶다.
+
+
+
+### 예제 사용법
+#### build
+``` ./gradlew clean build ```
+
+#### run
+``` java -jar build/libs/strategy1-1.0-SNAPSHOT.jar 20M ```
+
+뒤에 20M 대신에 [연령대(M|F)] 로 입력하기
