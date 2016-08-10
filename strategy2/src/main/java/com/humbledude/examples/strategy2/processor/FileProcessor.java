@@ -6,10 +6,10 @@ import java.io.FileOutputStream;
 /**
  * Created by keunhui.park on 2016. 8. 5..
  */
-public class FileProcessor extends Processor{
+public class FileProcessor implements IProcess {
 
   @Override
-  protected void process() {
+  public void process() {
     File file = new File("./output");
     FileOutputStream stream;
     try {

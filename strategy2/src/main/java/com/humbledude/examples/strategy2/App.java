@@ -15,15 +15,16 @@ public class App {
 
     System.out.println("hello world");
 
-    Processor processor1 = new FileProcessor();
-    processor1.setInputData(null);
-    processor1.doProcess();
-    System.out.println("FileProcessor : " + processor1.getLastProcessTime() + "ms");
+    Processor processor = new Processor();
+    processor.setInputData(null);
 
-    Processor processor2 = new MemoryProcessor();
-    processor2.setInputData(null);
-    processor2.doProcess();
-    System.out.println("MemoryProcessor : " + processor2.getLastProcessTime() + "ms");
+    processor.setProcess(new FileProcessor());
+    processor.doProcess();
+    System.out.println("FileProcessor : " + processor.getLastProcessTime() + "ms");
+
+    processor.setProcess(new MemoryProcessor());
+    processor.doProcess();
+    System.out.println("MemoryProcessor : " + processor.getLastProcessTime() + "ms");
 
   }
 }

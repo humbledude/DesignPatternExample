@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by keunhui.park on 2016. 8. 5..
  */
-public abstract class Processor {
+public class Processor {
 
   // assume data is in here
   private List<String> inputData;
@@ -14,7 +14,8 @@ public abstract class Processor {
   private long startTime;
   private long endTime;
 
-  protected abstract void process();
+  private IProcess process;
+
 
   public void setInputData(List<String> inputData) {
     this.inputData = inputData;
@@ -22,7 +23,7 @@ public abstract class Processor {
 
   public void doProcess() {
     startTime = System.currentTimeMillis();
-    process();
+    process.process();
     endTime = System.currentTimeMillis();
   }
 
@@ -30,4 +31,11 @@ public abstract class Processor {
     return endTime - startTime;
   }
 
+  public IProcess getProcess() {
+    return process;
+  }
+
+  public void setProcess(IProcess process) {
+    this.process = process;
+  }
 }
