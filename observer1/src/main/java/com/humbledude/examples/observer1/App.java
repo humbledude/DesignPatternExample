@@ -1,12 +1,9 @@
 package com.humbledude.examples.observer1;
 
-import com.humbledude.examples.observer1.audiopath.AudioPathManager;
-import com.humbledude.examples.observer1.device.AudioDeviceManager;
-import com.humbledude.examples.observer1.device.BluetoothObservable;
-import com.humbledude.examples.observer1.device.HDMIObservable;
-import com.humbledude.examples.observer1.device.HeadsetObservable;
-import com.humbledude.examples.observer1.device.USBObservable;
-import com.humbledude.examples.observer1.device.Observable;
+import com.humbledude.examples.observer1.observer.AudioManager;
+import com.humbledude.examples.observer1.observable.HDMIObservable;
+import com.humbledude.examples.observer1.observable.Observable;
+import com.humbledude.examples.observer1.observer.DisplayManager;
 
 import java.util.List;
 
@@ -18,28 +15,19 @@ public class App {
   public static void main (String[] args) {
     System.out.println("hello world!");
 
-    AudioDeviceManager audioDeviceManager = new AudioDeviceManager();
-    AudioPathManager audioPathManager = new AudioPathManager();
+    HDMIObservable hdmiObservable = new HDMIObservable();
 
-    audioDeviceManager.attachObserver(audioPathManager);
+    AudioManager audioManager = new AudioManager();
+    DisplayManager displayManager = new DisplayManager();
 
+    hdmiObservable.attach(audioManager);
+    hdmiObservable.attach(displayManager);
 
-    // test
-    List<Observable> deviceList = audioDeviceManager.getDeviceList();
-    Observable s = deviceList.get(0);
-    ((HeadsetObservable)s).setHeadsetAttached(true);
+    //test
+    hdmiObservable.setHdmiAttached(true);
+    hdmiObservable.setHdmiAttached(false);
+    hdmiObservable.setHdmiAttached(true);
 
-
-    s = deviceList.get(1);
-    ((BluetoothObservable)s).setBluetoothAttached(true);
-    ((BluetoothObservable)s).setBluetoothAttached(false);
-
-    s = deviceList.get(2);
-    ((USBObservable)s).setUsbAttached(true);
-
-    s = deviceList.get(3);
-    ((HDMIObservable)s).setHdmiAttached(true);
-    ((HDMIObservable)s).setHdmiAttached(false);
 
 
   }
