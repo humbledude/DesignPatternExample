@@ -1,19 +1,17 @@
 package com.humbledude.examples.strategy1.menu;
 
-import com.humbledude.examples.strategy1.menu.MenuRecoAlgorithm;
-
 /**
  * Created by keunhui.park on 2016. 8. 10..
  */
 public class MenuRecomend {
 
-  private MenuRecoAlgorithm algorithm;
+  private MenuAlgorithm algorithm;
 
-  public MenuRecoAlgorithm getAlgorithm() {
+  public MenuAlgorithm getAlgorithm() {
     return algorithm;
   }
 
-  public void setAlgorithm(MenuRecoAlgorithm algorithm) {
+  public void setAlgorithm(MenuAlgorithm algorithm) {
     this.algorithm = algorithm;
   }
 

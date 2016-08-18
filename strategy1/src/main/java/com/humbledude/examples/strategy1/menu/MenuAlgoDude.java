@@ -6,15 +6,15 @@ import java.util.List;
 /**
  * Created by keunhui.park on 2016. 8. 5..
  */
-public class MenuRecoBar implements MenuRecoAlgorithm{
+public class MenuAlgoDude implements MenuAlgorithm {
 
   private List<String> menu;
 
-  public MenuRecoBar() {
+  public MenuAlgoDude() {
     menu = new ArrayList<>();
-    menu.add("냉면육수");
-    menu.add("육개장");
-    menu.add("장어탕");
+    menu.add("벌거킹");
+    menu.add("맥더날드");
+    menu.add("놋대리아");
   }
   @Override
   public String getRecoMenu() {

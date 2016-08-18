@@ -1,10 +1,9 @@
 package com.humbledude.examples.strategy1;
 
-import com.humbledude.examples.strategy1.menu.MenuRecoAlgorithm;
-import com.humbledude.examples.strategy1.menu.MenuRecoBar;
-import com.humbledude.examples.strategy1.menu.MenuRecoDude;
-import com.humbledude.examples.strategy1.menu.MenuRecoFoo;
-import com.humbledude.examples.strategy1.menu.MenuRecoPika;
+import com.humbledude.examples.strategy1.menu.MenuAlgoBar;
+import com.humbledude.examples.strategy1.menu.MenuAlgoDude;
+import com.humbledude.examples.strategy1.menu.MenuAlgoFoo;
+import com.humbledude.examples.strategy1.menu.MenuAlgoPika;
 import com.humbledude.examples.strategy1.menu.MenuRecomend;
 
 /**
@@ -18,23 +17,23 @@ public class App {
     MenuRecomend menu = new MenuRecomend();
 
     if (args.length == 0) {
-      menu.setAlgorithm(new MenuRecoPika());
+      menu.setAlgorithm(new MenuAlgoPika());
     } else {
       switch(args[0]) {
         case "30M" :
-          menu.setAlgorithm(new MenuRecoDude());
+          menu.setAlgorithm(new MenuAlgoDude());
           break;
         case "20F" :
-          menu.setAlgorithm(new MenuRecoFoo());
+          menu.setAlgorithm(new MenuAlgoFoo());
           break;
         case "40M" :
-          menu.setAlgorithm(new MenuRecoBar());
+          menu.setAlgorithm(new MenuAlgoBar());
           break;
         case "50M" :
-          menu.setAlgorithm(new MenuRecoBar());
+          menu.setAlgorithm(new MenuAlgoBar());
           break;
         default:
-          menu.setAlgorithm(new MenuRecoPika());
+          menu.setAlgorithm(new MenuAlgoPika());
           break;
       }
     }
