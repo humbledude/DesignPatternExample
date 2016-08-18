@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 /**
  * Created by keunhui.park on 2016. 8. 5..
  */
-public class FileProcessor implements IProcess {
+public class FileProcess implements IProcess {
 
   @Override
   public void process() {

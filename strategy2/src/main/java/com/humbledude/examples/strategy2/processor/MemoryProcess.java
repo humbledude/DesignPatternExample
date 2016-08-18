@@ -3,7 +3,7 @@ package com.humbledude.examples.strategy2.processor;
 /**
  * Created by keunhui.park on 2016. 8. 5..
  */
-public class MemoryProcessor implements IProcess {
+public class MemoryProcess implements IProcess {
 
   StringBuilder builder = new StringBuilder();
 

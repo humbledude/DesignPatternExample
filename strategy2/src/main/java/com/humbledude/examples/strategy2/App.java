@@ -1,8 +1,8 @@
 package com.humbledude.examples.strategy2;
 
 
-import com.humbledude.examples.strategy2.processor.FileProcessor;
-import com.humbledude.examples.strategy2.processor.MemoryProcessor;
+import com.humbledude.examples.strategy2.processor.FileProcess;
+import com.humbledude.examples.strategy2.processor.MemoryProcess;
 import com.humbledude.examples.strategy2.processor.Processor;
 
 /**
@@ -18,13 +18,13 @@ public class App {
     Processor processor = new Processor();
     processor.setInputData(null);
 
-    processor.setProcess(new FileProcessor());
+    processor.setProcess(new FileProcess());
     processor.doProcess();
-    System.out.println("FileProcessor : " + processor.getLastProcessTime() + "ms");
+    System.out.println("FileProcess : " + processor.getLastProcessTime() + "ms");
 
-    processor.setProcess(new MemoryProcessor());
+    processor.setProcess(new MemoryProcess());
     processor.doProcess();
-    System.out.println("MemoryProcessor : " + processor.getLastProcessTime() + "ms");
+    System.out.println("MemoryProcess : " + processor.getLastProcessTime() + "ms");
 
   }
 }
