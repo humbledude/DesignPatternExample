@@ -13,6 +13,7 @@ public abstract class Effector implements Guitar {
     this.guitar = guitar;
   }
 
+  @Override
   public String playSound() {
     return this.guitar.playSound();
   }
