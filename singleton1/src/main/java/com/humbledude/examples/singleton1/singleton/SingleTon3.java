@@ -5,7 +5,7 @@ package com.humbledude.examples.singleton1.singleton;
  */
 public class SingleTon3 extends SingleTon {
 
-  private static volatile SingleTon3 instance = null;
+  private static  SingleTon3 instance = null;
 
   private SingleTon3() {
   }
